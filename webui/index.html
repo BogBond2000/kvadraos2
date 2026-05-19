@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>System Monitor</h1>
+        <div class="timestamp">Last update: <span id="timestamp">-</span></div>
+    </header>
+
+    <div class="gauge-container">
+        <div class="gauge">
+            <div class="gauge-title">CPU Total</div>
+            <div class="gauge-value" id="cpu-total">0%</div>
+            <div class="gauge-bar"><div class="gauge-fill" id="cpu-fill" style="width:0%"></div></div>
+        </div>
+        <div class="gauge">
+            <div class="gauge-title">Memory</div>
+            <div class="gauge-value" id="mem-value">0%</div>
+            <div class="gauge-bar"><div class="gauge-fill" id="mem-fill" style="width:0%"></div></div>
+        </div>
+        <div class="gauge">
+            <div class="gauge-title">Swap</div>
+            <div class="gauge-value" id="swap-value">0%</div>
+            <div class="gauge-bar"><div class="gauge-fill" id="swap-fill" style="width:0%"></div></div>
+        </div>
+    </div>
+
+    <div class="loadavg">
+        Load Average: <span id="load1">0.00</span> (1m) &nbsp;
+        <span id="load5">0.00</span> (5m) &nbsp;
+        <span id="load15">0.00</span> (15m)
+    </div>
+
+    <div class="cpus">
+        <h3>Per-Core Usage</h3>
+        <div id="cores" class="cores-list"></div>
+    </div>
+
+    <div class="processes">
+        <h3>Top Processes by CPU</h3>
+        <table>
+            <thead><tr><th>PID</th><th>Name</th><th>CPU%</th><th>RSS (KB)</th></tr></thead>
+            <tbody id="proc-table"></tbody>
+        </table>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
