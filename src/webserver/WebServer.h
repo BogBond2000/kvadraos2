@@ -2,6 +2,7 @@
 
 #include "../common/SharedStruct.h"
 #include "../common/SharedMemory.h"
+#include <httplib.h>
 #include <string>
 
 class WebServer {
