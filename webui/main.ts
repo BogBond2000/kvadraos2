@@ -64,7 +64,7 @@ function updateUI(data: Stats) {
     }
 
     // Process table
-    const tbody = document.getElementById('proc-table')!;
+    const tbody = document.getElementById('proc-table') as HTMLTableSectionElement;
     tbody.innerHTML = '';
     for (const proc of data.top_procs) {
         const row = tbody.insertRow();
